@@ -1,0 +1,12 @@
+<?php
+ob_start();
+include('header_product.php');
+?>
+<?php
+include('Template/banner-area-dummy.php');
+include('Template/products.php');
+include('Template/top-sale.php');
+?>
+<?php
+include('footer_client.php');
+?>

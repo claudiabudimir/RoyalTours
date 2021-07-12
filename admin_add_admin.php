@@ -1,0 +1,10 @@
+<?php
+ob_start();
+include('header_admin.php');
+?>
+<?php
+include('insert_admininfo.php');
+?>
+<?php
+include('footer_admin.php');
+?>

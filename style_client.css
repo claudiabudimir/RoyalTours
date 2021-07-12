@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Flamenco&family=Newsreader&display=swap");
+
+/* Sass template */
+
+
+/*global classes */
+
+button,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+:root {
+    --main-white-color: white;
+    --main-black-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.static {
+    position: static;
+}
+
+.cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.owl-slide-title {
+    color: aliceblue;
+    text-shadow: black 0.5px 0px 0px, black 1.83487px 0.981584px 0px, black 1.35766px 0.85511px 0px, black 1.62091px 2.52441px 0px, black 0.705713px 2.91581px 0px, black -0.287171px 2.98622px 0px, black -1.24844px 2.72789px 0px, black -2.07227px 2.16926px 0px, black -2.66798px 1.37182px 0px, black -2.96998px 0.42336px 0px, black -2.94502px -0.571704px 0px, black -2.59586px -1.50383px 0px, black -1.96093px -2.27041px 0px, black -1.11013px -2.78704px 0px, black -0.137119px -2.99686px 0px, black 0.850987px -2.87677px 0px, black 1.74541px -2.43999px 0px, black 2.44769px -1.73459px 0px, black 1.88051px -0.838247px 0px;
+}
+
+.owl-carousel .owl-slide {
+    position: relative;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.owl-carousel .owl-slide-animated {
+    transform: translateX(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+    transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+    transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+    transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+    position: absolute;
+}
+
+.owl-carousel .owl-dots .owl-dot,
+.owl-carousel .owl-nav [class*=owl-]:focus {
+    outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+    background: transparent;
+    border: 1px solid var(--main-black-color);
+    transition: all 0.2s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+    background: var(--main-black-color);
+}
+
+.owl-carousel .owl-nav {
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+    opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*=owl-]:hover {
+    background: transparent;
+}
+
+section {
+    display: none;
+}
+
+@media screen and (max-width: 575px) {
+    .owl-carousel .owl-nav {
+        top: 5%;
+    }
+    .owl-carousel .owl-nav svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .collapse {
+        display: block;
+    }
+}
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+
+/* Clear floats after image containers */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* typography classes*/
+
+.font-flamingo {
+    font-family: "Flamenco", cursive;
+}
+
+.font-carrois {
+    font-family: "Carrois Gothic SC", cursive;
+}
+
+.font-newsreader {
+    font-family: "Newsreader", cursive;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.a:link {
+    text-decoration: none;
+}
+
+
+/*color template*/
+
+.color-primary {
+    color: #003859;
+}
+
+.color-primary-bg {
+    background: blue;
+}
+
+.color-second {
+    color: #00A5C4;
+}
+
+.color-second-bg {
+    background: #00A5C4;
+}
+
+.color-yellow {
+    color: #FFD289;
+}
+
+.color-yellow-bg {
+    background: #FFD289;
+}
+
+
+/*top sale template*/
+
+#top-sale .owl-carousel .item .product a {
+    overflow: hidden;
+}
+
+#top-sale .owl-carousel .item .product img {
+    transition: transform 0.5s ease;
+}
+
+#top-sale .owl-carousel .item .product img:hover {
+    transform: scale(1.1);
+}
+
+#top-sale .owl-carousel .owl-nav button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+}
+
+#top-sale .owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+#top-sale .owl-carousel .owl-nav button.owl-prev span {
+    font-style: 100px;
+    font-size: 100px;
+    color: white;
+    margin-left: -4rem;
+    padding: 0 1rem;
+}
+
+#top-sale .owl-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
+#top-sale .owl-carousel .owl-nav button.owl-next span {
+    font-style: 100px;
+    font-size: 100px;
+    color: white;
+    margin-right: -4rem;
+    padding: 0 1rem;
+}
+
+
+/*# Product gallery
+
+
+
+/*# sourceMappingURL=style_client.css.map */
